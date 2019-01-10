@@ -1,0 +1,14 @@
+$blue-1: #135680;
+$blue-2: #176799;
+$blue-3: #1B78B3;
+$blue-4: #1F8ACC;
+$blue-5: #229BE6;
+$blue-6: #D9F0FF;
+
+.d3-chart {
+  .arc {
+    &:hover {
+      opacity: .8;
+    }
+  }
+}

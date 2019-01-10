@@ -1,0 +1,27 @@
+$blue-1: #135680;
+$blue-2: #176799;
+$blue-3: #1B78B3;
+$blue-4: #1F8ACC;
+$blue-5: #229BE6;
+$blue-6: #D9F0FF;
+
+.d3-chart {
+
+  .axis {
+
+    path, line {
+      stroke: #999;
+    }
+
+    text {
+      fill: #999;
+    }
+  }
+}
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 2px;
+}
+

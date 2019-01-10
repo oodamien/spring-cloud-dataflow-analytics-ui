@@ -1,0 +1,22 @@
+<div>
+  <div class="page-tab">
+    <div class="page-tab-head">
+      <ul class="nav-tabs">
+        <li role="presentation" routerLinkActive="active"><a routerLink="dashboard">Dashboard</a></li>
+        <li role="presentation" routerLinkActive="active"><a routerLink="counters">Counters</a></li>
+      </ul>
+    </div>
+    <div>
+      <p [hidden]="!router.isActive('/analytics/dashboard', true)">
+        This section displays dashboard for the metrics data from various counter apps.
+      </p>
+      <p [hidden]="!router.isActive('/analytics/counters', true)">
+        This section displays counters and their values.
+      </p>
+    </div>
+    <div class="tab-pane">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+
+</div>

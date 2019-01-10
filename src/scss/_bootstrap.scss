@@ -1,0 +1,181 @@
+$spring-8points: 8px;
+
+$spring-color: #000;
+$spring-primary-color: #179990;
+$spring-link-color: #097dff;
+
+$spring-font-size: 15px;
+$spring-font-size-sm: 14px;
+$spring-font-family: Karla, sans-serif;
+$spring-font-family-special: Montserrat;
+
+$spring-radius: 4px;
+$spring-transition-duration: .15s;
+
+$spring-sidebar-width: $spring-8points * 35;
+
+body {
+  background-color: #fff;
+  font-size: 15px;
+  font-family: "SourceSansPro", "Source Sans Pro", sans-serif;
+  line-height: 1.5;
+  color: #243641;
+}
+
+table.table {
+  width: 100%;
+  border-spacing: 0;
+  margin-top: 2rem;
+  tr {
+    td, th {
+      border-bottom: 1px solid #CCC;
+      padding: .4rem;
+    }
+  }
+  thead {
+    tr {
+      th {
+        text-align: left;
+        white-space: nowrap;
+      }
+    }
+  }
+  tbody {
+    tr {
+      td.td-actions {
+        white-space: nowrap;
+        div.actions {
+          .btn {
+            line-height: $spring-8points * 3;
+            padding: 0 $spring-8points;
+            margin: 1px;
+          }
+        }
+      }
+    }
+  }
+  h2 {
+    margin: 0;
+    padding: 1rem 0;
+    font-size: 16px;
+    font-weight: bold;
+  }
+}
+
+.page-tab {
+  .page-tab-head {
+    display: block;
+    ul.nav-tabs {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      border-bottom: 2px solid #ccc;
+      li {
+        margin-bottom: -2px;
+        display: inline-block;
+        a {
+          display: inline-block;
+          padding: .5rem 1rem;
+          border-bottom: 2px solid #ccc;
+          color: $spring-color;
+          text-decoration: none;
+        }
+        &.active {
+          a {
+            border-bottom: 2px solid $spring-primary-color;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}
+
+.btn {
+
+  border: 2px solid #ebebeb;
+  background-color: #fff;
+  border-radius: $spring-radius;
+  font-family: $spring-font-family;
+  font-size: $spring-font-size;
+  line-height: $spring-8points * 4;
+  padding: 0 $spring-8points;
+  font-weight: normal;
+  cursor: pointer;
+  outline: none;
+  vertical-align: center;
+  @include transition(all $spring-transition-duration);
+  &:hover {
+    border-color: #dcdcdc;
+  }
+  &.btn-primary {
+    background: $spring-primary-color;
+    color: white;
+    border-color: $spring-primary-color;
+    //padding: ($spring-8points / 2) $spring-8points * 5;
+    &:hover {
+      background: darken($spring-primary-color, 5);
+      border-color: darken($spring-primary-color, 5);
+    }
+  }
+  &:disabled {
+    cursor: not-allowed;
+    opacity: .3;
+  }
+}
+
+button.btn {
+  line-height: 30px;
+}
+
+#footer {
+  border-top: 1px solid #ccc;
+  padding: 1rem 0;
+  margin-top: 2rem;
+  color: #888;
+}
+
+
+// Input component
+
+.control-text {
+  display: block;
+  border: 0 none;
+  outline: none;
+  border-bottom: 3px solid #ebebeb;
+  line-height: $spring-8points * 2;
+  font-family: $spring-font-family;
+  font-size: $spring-font-size;
+  box-sizing: border-box;
+  background-clip: padding-box;
+  width: 100%;
+  padding: .35rem 0 .55rem 0;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-border-radius: 0px;
+  background: #FFF;
+
+  &:focus {
+    @include transition(border-color $spring-transition-duration);
+    border-color: $spring-primary-color;
+  }
+  &::placeholder {
+    font-style: italic;
+    color: #888;
+  }
+}
+
+.form-group {
+  .control-text {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  .btn {
+    display: inline-block;
+  }
+}
+
+.error {
+  color: #CC1F27;
+}
